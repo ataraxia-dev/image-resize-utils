@@ -21,7 +21,6 @@ function imgutils_resize_image( $id, $w, $h ) {
             $target_h = $h;
             $image = wp_get_image_editor( $old_path );
             if(!($image instanceof WP_Error)) {
-                list( $curr_w, $curr_h ) = $image->get_size();
                 /* if the image is too small, scale/crop to the largest
                  * available size with the same proportions (unfortunately 
                  * this "lies" about the image size in the url... to fix
